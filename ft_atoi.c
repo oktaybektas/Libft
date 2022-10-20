@@ -1,8 +1,7 @@
 /*
- * 
- *
- *
+ * String ifadeyi integera çevirir
 */
+
 
 #include "libft.h"
 
