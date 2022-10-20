@@ -1,6 +1,7 @@
 /*
  * c değişkeni eğer küçükse harfse büyük yapar.
 */
+
 #include "libft.h"
 
 int	ft_toupper(int c)
