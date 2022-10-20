@@ -1,60 +1,33 @@
-# Folders and Names
-NAME		= libft.a
-SRCSDIR		= srcs
-OBJSDIR		= objs
-INCLUDES	= incs
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: obektas <obektas@student.42.fr>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/10/20 22:56:31 by obektas           #+#    #+#              #
+#    Updated: 2022/10/20 22:56:37 by obektas          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
-SRCS			=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
-					ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c \
-					ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_tolower.c ft_strchr.c \
-					ft_strrchr.c ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c ft_atoi.c \
-					ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c \
-					ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
-					ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c 
-OBJS		= $(SRCS:%.c=$(OBJSDIR)/%.o)
-	
-
-BONUS			=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
-					ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
-					ft_lstmap.c 
-BONUS_OBJS		= $(BONUS:%.c=$(OBJSDIR)/%.o)
-# Compiler options
-CC			= gcc
-CFLAGS		= -Wall -Wextra -Werror
+NAME = libft.a
+FLAG = -Wall -Wextra -Werror
+SRC = $(shell find . ! -name "ft_lst*.c" -name "ft_*.c")
+BONUS = $(shell find . -name "ft_lst*.c")
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	@echo "Bağlama $@"
-	@ar rc $(NAME) $(OBJS)
-	@echo "Done!"
-
-$(OBJS): $(OBJSDIR)/%.o: $(SRCSDIR)/%.c
-	@mkdir -p $(@D)
-	@echo "derleniyor $<"
-	@$(CC) $(CFLAGS) -I$(INCLUDES) -c $< -o $@
-
+$(NAME):
+	gcc $(FLAG) -c $(SRC)
+	ar rc $(NAME) *.o
+bonus:
+	gcc $(FLAG) -c $(BONUS)
+	ar rc $(NAME) *.o
 clean:
-	rm -rf $(OBJSDIR)
-
+	@rm -f *.o
 fclean: clean
-	rm -rf $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
 
-bonus: $(OBJS) $(BONUS_OBJS)
-	@echo "Bağlama $@"
-	@ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
-	@echo "Done!"
-
-$(BONUS_OBJS): $(OBJSDIR)/%.o: $(SRCSDIR)/%.c
-	@mkdir -p $(@D)
-	@echo "bonus derleniyor $<"
-	@$(CC) $(CFLAGS) -I$(INCLUDES) -c $< -o $@
-
-#test1: 
-#	@echo "Test Dosyası Oluşturuluyor."
-#	@$(CC) $(CFLAGS) -I$(INCLUDES) $(TEST) -o main
-#	@echo "Test Dosyası Oluşturuldu."
-
-.PHONY: all clean fclean re bonus
+.PHONY: all bonus clean fclean re

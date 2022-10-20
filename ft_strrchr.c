@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: obektas <obektas@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/20 22:37:21 by obektas           #+#    #+#             */
+/*   Updated: 2022/10/20 23:42:48 by obektas          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
  * Stringin içinde find'i tersten arar,
  * Bulduğu ilk yerin adresini döndürür.
@@ -7,14 +19,21 @@
 
 char	*ft_strrchr(const char *str, int find)
 {
-	int	index;
+	int	i;
 
-	index = ft_strlen(str);
-	while (index >= 0)
+	i = ft_strlen(str);
+	while (i >= 0)
 	{
-		if (*((char *)(str + index)) == (char)(find))
-			return ((char *)(str + index));
-		index--;
+		if (*((char *)(str + i)) == (char)(find))
+			return ((char *)(str + i));
+		i--;
 	}
 	return (NULL);
 }
+/*
+int main()
+{
+	char *c="oktaykat";
+	int v = 'k';
+	printf("%s", ft_strrchr(c, v));
+}*/

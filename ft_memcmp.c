@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: obektas <obektas@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/20 22:35:31 by obektas           #+#    #+#             */
+/*   Updated: 2022/10/20 23:45:33 by obektas          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
  * Indisleri n kadar unsigned char cinsinde karşılaştırır
  * Farklı bir karakter bulursa ascii farkını döndürür.
@@ -19,3 +31,10 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		return (0);
 	return (*(str1 + i) - *(str2 + i));
 }
+/*
+int		main(void)
+{
+	printf("ft_strncmp : %d\n", memcmp("oktayyy2", "oktazzz2", 6));
+	printf("strncmp : %d\n", memcmp("oktayyy2", "oktaya", 6));
+	printf("strncmp : %d\n", memcmp("oktay", "oktay", 5));
+}*/

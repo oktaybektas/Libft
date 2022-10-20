@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: obektas <obektas@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/20 22:34:06 by obektas           #+#    #+#             */
+/*   Updated: 2022/10/20 23:51:47 by obektas          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
@@ -15,7 +27,6 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	}
 }
 /* void free_print(void *content);
-void	ft_lstadd_back(t_list **lst, t_list *new);
 #include <stdio.h>
 int		main(void)
 {
@@ -33,31 +44,10 @@ int		main(void)
 	ft_lstclear(&list, free_print);
 	printf("list adresi : %#p\n", list);
 }
-void	ft_lstadd_back(t_list **lst, t_list *new)
-{
-	t_list	*tmp;
 
-	if (!lst || !new)
-		return ;
-	tmp = *lst;
-	if (!tmp)
-	{
-		*lst = new;
-		return ;
-	}
-	while (tmp->next)
-		tmp = tmp->next;
-	tmp->next = new;
-}
 void free_print(void *content)
 {
 	content = NULL;
 	printf("listeden silinen eleman değilşkeni kontrol %s\n", (char *)content);
 }
-void	ft_lstdelone(t_list *lst, void (*del)(void*))
-{
-	if (!lst || !del)
-		return ;
-	del(lst->content);
-	free(lst);
-} */
+*/

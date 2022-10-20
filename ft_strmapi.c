@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: obektas <obektas@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/20 22:37:06 by obektas           #+#    #+#             */
+/*   Updated: 2022/10/20 23:41:51 by obektas          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
  * S dizisine f fonksiyonu işlem yapılır
  * Sonunda char değişkeninde tutar
@@ -8,7 +20,7 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*str;
-	size_t		i;
+	size_t	i;
 
 	if (!s)
 		return (NULL);
@@ -24,9 +36,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-
 /* char ft_double(unsigned int, char);
-int	ft_strlen(const char *);
 #include <stdio.h>
 int	main(void)
 {
@@ -41,13 +51,4 @@ char ft_double(unsigned int i, char c)
 		return(c + 1);
 	else
 		return(c - 1);
-}
-int	ft_strlen(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (*(str++))
-		i++;
-	return (i);
-} */
+}*/

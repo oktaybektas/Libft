@@ -1,7 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: obektas <obektas@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/08 01:10:30 by obektas           #+#    #+#             */
+/*   Updated: 2022/10/20 23:49:09 by obektas          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
  * String ifadeyi integera çevirir
 */
-
 
 #include "libft.h"
 
@@ -23,3 +34,10 @@ int	ft_atoi(const char *str)
 		result = result * 10 + ((unsigned long)*str++ - 48);
 	return ((int)result * sign);
 }
+/*
+#include<stdio.h>
+int main()
+{
+    printf("  -528: %d\n", ft_atoi(" -528"));
+    return 0;
+}*/

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: obektas <obektas@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/20 22:37:27 by obektas           #+#    #+#             */
+/*   Updated: 2022/10/20 23:32:25 by obektas          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
  * s1'in başından ve sonundan set'ın içerisindeki karakterleri
  * silinmiş halini yeni bir string olarak döndürür.
@@ -20,62 +32,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i--;
 	return (ft_substr(s1, 0, i + 1));
 }
-/* int		ft_strlen(const char *str);
-char	*ft_strchr(const char *s, int c);
-char	*ft_substr(char const *s, unsigned int start, size_t len);
+/* 
 #include <stdio.h>
 #include <stdlib.h>
 int	main(void)
 {
 	printf("%s\n", ft_strtrim("cbabqbc", "bc"));
-	printf("%s\n", ft_strtrim("xavocadoyz", "xyz"));
-} */
-/* int	ft_strlen(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (*(str++))
-		i++;
-	return (i);
-}
-
-char	*ft_strchr(const char *s, int c)
-{
-	unsigned int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		if (s[i] == (char)c)
-			return ((char *)&s[i]);
-		i++;
-	}
-	if ((char)c == s[i])
-		return ((char *)&s[i]);
-	return (NULL);
-}
-
-char	*ft_substr(char const *s, unsigned int start, size_t len)
-{
-	size_t i;
-	size_t j;
-	char *str;
-
-	str = (char *)malloc(sizeof(*s) * (len + 1));
-	if (!str)
-		return (NULL);
-	i = 0;
-	j = 0;
-	while (s[i])
-	{
-		if (i >= start && j < len)
-		{
-			str[j] = s[i];
-			j++;
-		}
-		i++;
-	}
-	str[j] = 0;
-	return (str);
 } */

@@ -1,19 +1,37 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: obektas <obektas@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/03 22:33:50 by obektas           #+#    #+#             */
+/*   Updated: 2022/10/20 23:02:19 by obektas          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
- * Dizinin ilk n karakterine NULL atar.
+ * Dizinin ilk n karakterine kadar NULL atar.
 */
 
 #include "libft.h"
 
-void	ft_bzero(void *str, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	size_t	i;
-
-	if (!str)
-		return ;
-	i = 0;
-	while (i < n)
-	{
-		*((char *)(str + i)) = 0;
-		i++;
-	}
+	ft_memset(s, '\0', n);
 }
+/*
+int main(void)
+{
+    char b[] = "bzero";
+    size_t i;
+    int a = strlen(b);
+    i = 0;
+    ft_bzero(b, 2);
+    while (i <= a)
+    {
+        printf("%c\n", b[i]);
+        i++;
+    }
+    return (0);
+}*/

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: obektas <obektas@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/20 22:35:24 by obektas           #+#    #+#             */
+/*   Updated: 2022/10/20 23:44:15 by obektas          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
  * Stringin ilk n kadar karakter içinde c'yi arar.
  * Eğer c'yi bulursa, ilk bulduğu adresi döndürür.
@@ -18,3 +30,10 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+/*
+int main()
+{
+	char *c="oktay";
+	int v = 'k';
+	printf("%s", ft_memchr(c, v, 2));
+}*/

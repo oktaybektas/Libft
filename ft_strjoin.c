@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: obektas <obektas@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/20 22:36:44 by obektas           #+#    #+#             */
+/*   Updated: 2022/10/20 23:41:14 by obektas          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
  * S1+S2 dizilerinin uzunlukları alınır
  * Malloc ile yer ayırılan yeni değişkene
@@ -29,17 +41,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	return (0);
 }
-/* int	ft_strlen(const char *str)
-{
-	int	i = 0;
-	while (*(str++))
-		i++;
-	return (i);
-}
+/*
 int	main(void)
 {
-	char dizi[] = "substr function";
-	char dizi2[] = "Implementation";
+	char dizi[] = "Oktay ";
+	char dizi2[] = "BEKTAS";
 	char *dest = ft_strjoin(dizi, dizi2);
 	printf("%s", dest);
 } */

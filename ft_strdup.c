@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: obektas <obektas@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/20 22:36:31 by obektas           #+#    #+#             */
+/*   Updated: 2022/10/20 23:39:37 by obektas          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
  * malloc ile yer ayırıp 
  * str dizisinin kopyasını oluşturur
@@ -8,7 +20,7 @@
 char	*ft_strdup(const char *str)
 {
 	char	*ptr;
-	size_t		i;
+	size_t	i;
 
 	i = 0;
 	ptr = (char *) malloc (sizeof(char) * (ft_strlen(str) + 1));
@@ -22,3 +34,9 @@ char	*ft_strdup(const char *str)
 	ptr[i] = '\0';
 	return (ptr);
 }
+/*
+int		main(void)
+{
+printf("%s\n", ft_strdup("Hello world!"));
+return (0);
+}*/

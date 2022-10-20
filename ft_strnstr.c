@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: obektas <obektas@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/20 22:37:17 by obektas           #+#    #+#             */
+/*   Updated: 2022/10/20 23:25:36 by obektas          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
  * haystack'nin ilk n kadar karakterinin içerisinde find'ı
  * arar, bulursa ilk bulduğu yerin adresini döndürür. 
@@ -9,7 +21,7 @@
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
-	size_t		j;
+	size_t	j;
 
 	i = 0;
 	if (*needle == 0)

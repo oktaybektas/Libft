@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: obektas <obektas@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/20 22:36:13 by obektas           #+#    #+#             */
+/*   Updated: 2022/10/20 23:23:56 by obektas          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
  * S dizisi içinde c ye eşit olmadığında
  * main *a[] stringine ekler
@@ -5,87 +17,75 @@
 */
 
 #include "libft.h"
+#include <stdio.h>
 
-static int	ft_wcounter(char const *s, char c)
-{
-	int	total;
-
-	total = 0;
-	while (*s == c && *s)
-		s++;
-	while (*s)
-	{
-		while (*s == c && *s)
-			s++;
-		if (*s)
-			total++;
-		while (*s && *s != c)
-			s++;
-	}
-	return (total + 1);
-}
-
-static int	ft_sizer(char const *s, char c)
+static int	ft_count_words(char const *s, char c)
 {
 	int	i;
+	int	count;
 
 	i = 0;
-	while (s[i] != c && s[i])
-		i++;
-	return (i);
+	count = 0;
+	while (s[i])
+	{
+		if (s[i] == c)
+			i++;
+		else
+		{
+			count++;
+			while (s[i] && s[i] != c)
+				i++;
+		}
+	}
+	return (count);
 }
 
-static char	*ft_new(char const *s, char c)
+static void	ft_allocate(char **new, char const *s, char c)
 {
-	char	*str;
-	int		i;
+	char		**new_p;
+	char const	*tmp;
 
-	i = 0;
-	str = (char *)malloc(ft_sizer(s, c) + 1 * sizeof(char));
-	while (s[i] && s[i] != c)
+	tmp = s;
+	new_p = new;
+	while (*tmp)
 	{
-		str[i] = s[i];
-		i++;
+		while (*s == c)
+			++s;
+		tmp = s;
+		while (*tmp && *tmp != c)
+			++tmp;
+		if (tmp > s)
+		{
+			*new_p = ft_substr(s, 0, tmp - s);
+			s = tmp;
+			++new_p;
+		}
 	}
-	str[i] = '\0';
-	return (str);
+	*new_p = NULL;
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**parr;
-	int		i;
-	int		j;
+	char	**new;
+	int		size;
 
-	i = 0;
-	j = 0;
 	if (!s)
 		return (NULL);
-	parr = (char **)malloc(ft_wcounter(s, c) * sizeof(char *));
-	if (!parr)
+	size = ft_count_words(s, c);
+	new = (char **)malloc(sizeof(char *) * (size + 1));
+	if (!new)
 		return (NULL);
-	while (s[i])
-	{
-		while (s[i] == c && s[i])
-			i++;
-		if (s[i])
-		{
-			parr[j++] = ft_new(s + i, c);
-			i += ft_sizer(s + i, c);
-		}
-	}
-	parr[j] = NULL;
-	return (parr);
+	ft_allocate(new, s, c);
+	return (new);
 }
-/* int	main(void)
+/*
+int	main(void)
 {
 	char	**a;
 	char	*dizi;
 
-	dizi = "marhaba.selamlar.mmm";
+	dizi = "Oktay.BEKTAS";
 	a = ft_split(dizi, '.');
-	// a = ft_split("marhaba.selamlar.mmm", '.');
 	printf("%s\n", a[0]);
-	printf("%s\n", a[1]);
-	printf("%s", a[2]);
-} */
+	printf("%s", a[1]);
+}*/

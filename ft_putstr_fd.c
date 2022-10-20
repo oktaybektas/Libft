@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: obektas <obektas@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/20 22:36:07 by obektas           #+#    #+#             */
+/*   Updated: 2022/10/20 23:43:20 by obektas          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
@@ -17,13 +29,4 @@ int	main(void)
 		printf("Dosya açıldı lütfen s1.txt içersine bakınız.");
 	char s[]= "Ahmet";
 	ft_putstr_fd(s, f);
-}
-int	ft_strlen(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (*(str++))
-		i++;
-	return (i);
-} */
+}*/

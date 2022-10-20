@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: obektas <obektas@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/20 23:07:00 by obektas           #+#    #+#             */
+/*   Updated: 2022/10/20 23:50:14 by obektas          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
@@ -34,15 +46,4 @@ int		main(void)
 	printf("***ft_lstadd_back fonksiyonu kullanıldı\n");
 	printf("list adresi %#p\n", list);
 	printf("list->next(yeni firest oldu) adresi %#p\n", list->next);
-}
-t_list	*ft_lstnew(void *content)
-{
-	t_list	*new;
-
-	new = (t_list *)malloc(sizeof(t_list));
-	if (new == NULL)
-		return (NULL);
-	new->content = content;
-	new->next = NULL;
-	return (new);
-} */
+}*/
