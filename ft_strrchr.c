@@ -1,19 +1,20 @@
+/*
+ * Stringin içinde find'i tersten arar,
+ * Bulduğu ilk yerin adresini döndürür.
+*/
+
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *str, int find)
 {
-	int		i;
-	char	*ptr;
+	int	index;
 
-	i = 0;
-	ptr = 0;
-	while (s[i])
+	index = ft_strlen(str);
+	while (index >= 0)
 	{
-		if (s[i] == (unsigned char )c)
-			ptr = (char *)(s + i);
-		i++;
+		if (*((char *)(str + index)) == (char)(find))
+			return ((char *)(str + index));
+		index--;
 	}
-	if (s[i] == c)
-		ptr = (char *)(s + i);
-	return (ptr);
+	return (NULL);
 }

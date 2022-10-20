@@ -1,3 +1,9 @@
+/*
+ * haystack'nin ilk n kadar karakterinin içerisinde find'ı
+ * arar, bulursa ilk bulduğu yerin adresini döndürür. 
+ * find NULL'ı gösteriyorsa haystack döndürülür.
+*/
+
 #include "libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)

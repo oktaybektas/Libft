@@ -1,5 +1,5 @@
 /*
- * stringin içinde find'i arar,
+ * stringin içinde c'i arar,
  * ilk bulduğu yerin adresini döndürür.
 */
 

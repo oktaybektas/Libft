@@ -1,3 +1,7 @@
+/*
+ * c değişkeni eğer büyük harfse küçültür.
+*/
+
 #include "libft.h"
 
 int	ft_tolower(int c)

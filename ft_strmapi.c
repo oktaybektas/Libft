@@ -1,3 +1,8 @@
+/*
+ * S dizisine f fonksiyonu işlem yapılır
+ * Sonunda char değişkeninde tutar
+*/
+
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))

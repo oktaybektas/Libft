@@ -1,3 +1,10 @@
+/*
+ * s1'in başından ve sonundan set'ın içerisindeki karakterleri
+ * silinmiş halini yeni bir string olarak döndürür.
+ * 
+ * substr (0 dan başla i+1 e kadar kopyala)
+*/
+
 #include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
