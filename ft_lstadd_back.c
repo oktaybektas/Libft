@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: obektas <obektas@student.42.fr>            +#+  +:+       +#+        */
+/*   By: obektas <obektas@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 23:07:00 by obektas           #+#    #+#             */
-/*   Updated: 2022/10/20 23:50:14 by obektas          ###   ########.fr       */
+/*   Updated: 2022/10/22 22:06:59 by obektas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,22 +28,21 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		tmp = tmp->next;
 	tmp->next = new;
 }
-/* t_list	*ft_lstnew(void *content);
+/*
 #include <stdio.h>
-int		main(void)
-{
-	char *strs[2];
-	strs[0] = "s1";
-	strs[1] = "s2";
-	t_list	*first;
-	t_list	*list;
-	
-	first = ft_lstnew((void *)strs[0]);//diğer gönderim first = ft_lstnew(strs[0]);
-	list = ft_lstnew((void *)strs[1]);
-	printf("firs adresi %#p\n", first);
-	printf("list adresi %#p\n", list);
-	ft_lstadd_back(&list, first);
-	printf("***ft_lstadd_back fonksiyonu kullanıldı\n");
-	printf("list adresi %#p\n", list);
-	printf("list->next(yeni firest oldu) adresi %#p\n", list->next);
-}*/
+#include<string.h>
+#include<stdlib.h>
+int main(){
+	int z[] = {9};
+	int tab[] = {0, 1, 2, 3, 5};
+	t_list *l =  ft_lstnew(tab);
+	t_list *v =  ft_lstnew(z);
+
+	printf("%d", ((int *)v->content)[0]);
+	for (int i = 0; i < 4; i++)
+	{
+		ft_lstadd_back(&l, ft_lstnew(tab + i));
+		printf("%d", ((int *)l->content)[i]);
+	}
+	ft_lstadd_front(&v, ft_lstnew(z));
+} */

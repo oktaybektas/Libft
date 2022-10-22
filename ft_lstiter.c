@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: obektas <obektas@student.42.fr>            +#+  +:+       +#+        */
+/*   By: obektas <obektas@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 22:34:18 by obektas           #+#    #+#             */
-/*   Updated: 2022/10/20 22:34:19 by obektas          ###   ########.fr       */
+/*   Updated: 2022/10/22 22:11:18 by obektas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,25 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		lst = lst->next;
 	}
 }
-/* t_list	*ft_lstnew(void *content);
-void	ft_lstadd_back(t_list **lst, t_list *new);
+/*
+#include <stdio.h>
+#include<string.h>
+#include<stdlib.h>
+void addOne(void * p) {++*(int*)p;}
+int main ()
+{
+int tab[] = {0, 1, 2, 3};
+	t_list * l =  ft_lstnew(tab);
+	for (int i = 1; i < 4; ++i)
+		{ft_lstadd_back(&l, ft_lstnew(tab + i));
+		printf("%d", ((int *)l->content)[i]);}
+	ft_lstiter(l, addOne);
+	printf("\n");
+	for (int i = 1; i < 4; ++i)
+		{ft_lstadd_back(&l, ft_lstnew(tab + i));
+		printf("%d", ((int *)l->content)[i]);}
+}*/
+/* 
 void ft_putstr(char *str);
 #include <stdio.h>
 int main ()
@@ -33,33 +50,6 @@ int main ()
 	ft_lstadd_back(&a, ft_lstnew("hello "));
 	ft_lstadd_back(&a, ft_lstnew("world"));
 	ft_lstiter(a, (void (*)(void *))ft_putstr);
-}
-t_list	*ft_lstnew(void *content)
-{
-	t_list	*new;
-
-	new = (t_list *)malloc(sizeof(t_list));
-	if (new == NULL)
-		return (NULL);
-	new->content = content;
-	new->next = NULL;
-	return (new);
-}
-void	ft_lstadd_back(t_list **lst, t_list *new)
-{
-	t_list	*tmp;
-
-	if (!lst || !new)
-		return ;
-	tmp = *lst;
-	if (!tmp)
-	{
-		*lst = new;
-		return ;
-	}
-	while (tmp->next)
-		tmp = tmp->next;
-	tmp->next = new;
 }
 void ft_putstr(char *str)
 {

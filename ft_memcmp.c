@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: obektas <obektas@student.42.fr>            +#+  +:+       +#+        */
+/*   By: obektas <obektas@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 22:35:31 by obektas           #+#    #+#             */
-/*   Updated: 2022/10/20 23:45:33 by obektas          ###   ########.fr       */
+/*   Updated: 2022/10/23 00:06:32 by obektas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t			i;
-	unsigned char	*str1;
+	unsigned char	*str1;//ewrwerewrew
 	unsigned char	*str2;
 
 	str1 = (unsigned char *)s1;

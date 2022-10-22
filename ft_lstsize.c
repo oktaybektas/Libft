@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: obektas <obektas@student.42.fr>            +#+  +:+       +#+        */
+/*   By: obektas <obektas@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 22:35:18 by obektas           #+#    #+#             */
-/*   Updated: 2022/10/20 22:35:19 by obektas          ###   ########.fr       */
+/*   Updated: 2022/10/22 20:39:46 by obektas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (i);
 }
-/* t_list	*ft_lstnew(void *content);
-void	ft_lstadd_front(t_list **lst, t_list *new);
+/*
 #include <stdio.h>
 int		main(void)
 {
@@ -39,21 +38,4 @@ int		main(void)
 	ft_lstadd_front(&list, first);
 	printf("%d", ft_lstsize(first));
 }
-void	ft_lstadd_front(t_list **lst, t_list *new)
-{
-	if (!lst || !new)
-		return ;
-	new->next = *lst;
-	*lst = new;
-}
-t_list	*ft_lstnew(void *content)
-{
-	t_list	*new;
-
-	new = (t_list *)malloc(sizeof(t_list));
-	if (new == NULL)
-		return (NULL);
-	new->content = content;
-	new->next = NULL;
-	return (new);
-} */
+*/

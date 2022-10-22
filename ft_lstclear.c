@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: obektas <obektas@student.42.fr>            +#+  +:+       +#+        */
+/*   By: obektas <obektas@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 22:34:06 by obektas           #+#    #+#             */
-/*   Updated: 2022/10/20 23:51:47 by obektas          ###   ########.fr       */
+/*   Updated: 2022/10/22 22:09:23 by obektas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,28 +26,20 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 		}
 	}
 }
-/* void free_print(void *content);
+/* 
 #include <stdio.h>
-int		main(void)
-{
-	char *strs[2];
-	strs[0] = "s1";
-	strs[1] = "s2";
-	t_list	*first;
-	t_list	*list;
-	
-	first = ft_lstnew(strs[0]);
-	list = ft_lstnew(strs[1]);
-	printf("firs adresi : %#p\n", first);
-	printf("list adresi : %#p\n", list);
-	ft_lstadd_back(&list,first);
-	ft_lstclear(&list, free_print);
-	printf("list adresi : %#p\n", list);
-}
-
-void free_print(void *content)
-{
-	content = NULL;
-	printf("listeden silinen eleman değilşkeni kontrol %s\n", (char *)content);
+#include<string.h>
+#include<stdlib.h>
+int main(){
+	t_list * l;
+	for (int i = 0; i < 3; i++)
+	{
+		ft_lstadd_front(&l, ft_lstnew(malloc(1)));
+		printf("%d", ((int *)l->content)[i]);
+		printf("\n");
+	}
+	ft_lstclear(&l, free);
+	printf("%d", ((int *)l->content));
+		printf("\n");
 }
 */
